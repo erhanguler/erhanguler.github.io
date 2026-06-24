@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Erhan G&uuml;ler | Differential Geometry</title>
+<meta name="description" content="Erhan Güler - Differential Geometry, Minimal Surfaces, Weierstrass Representations, Mathematical Physics">
+<meta name="author" content="Erhan Güler">
+
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<style>
+
+:root{
+  --bg:#f7f7f7;
+  --card:#ffffff;
+  --text:#1f2933;
+  --title:#163957;
+  --link:#0057b8;
+  --nav:#0b1f78;
+  --line:#dddddd;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family: Georgia, "Times New Roman", serif;
+  max-width:1120px;
+  margin:0 auto;
+  padding:24px;
+  line-height:1.6;
+  color:var(--text);
+  background:var(--bg);
+}
+
+header{
+  display:flex;
+  align-items:flex-start;
+  gap:36px;
+  margin-bottom:28px;
+}
+
+.profile{
+  width:190px;
+  max-width:100%;
+  border-radius:10px;
+  box-shadow:0 3px 12px rgba(0,0,0,0.14);
+  background:#fff;
+}
+
+h1{
+  margin:0 0 16px;
+  font-size:34px;
+  color:var(--title);
+  line-height:1.15;
+}
+
+.quote{
+  color:#13721c;
+  font-style:italic;
+  font-size:18px;
+  margin:0 0 18px;
+}
+
+.links{
+  margin-top:18px;
+}
+
+.links a{
+  display:inline-block;
+  margin:0 16px 8px 0;
+  text-decoration:none;
+  color:var(--link);
+}
+
+a:hover{
+  text-decoration:underline;
+}
+
+nav{
+  margin:30px 0 34px;
+  padding:14px 8px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  text-align:center;
+}
+
+nav a{
+  display:inline-block;
+  margin:6px 18px;
+  text-decoration:none;
+  color:var(--nav);
+  font-weight:700;
+}
+
+section{
+  margin-bottom:30px;
+  padding:22px;
+  background:var(--card);
+  border-radius:9px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.10);
+}
+
+h2{
+  margin-top:0;
+  color:var(--title);
+  border-bottom:2px solid #eeeeee;
+  padding-bottom:6px;
+}
+
+ul{
+  padding-left:20px;
+}
+
+li{
+  margin-bottom:8px;
+}
+
+.images{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:16px;
+  margin-top:16px;
+}
+
+.images img{
+  width:100%;
+  height:auto;
+  display:block;
+  border-radius:7px;
+  box-shadow:0 2px 8px rgba(0,0,0,0.15);
+  background:#fff;
+}
+
+footer{
+  text-align:center;
+  margin:40px 0 10px;
+  font-size:13px;
+  color:#666;
+}
+
+@media (max-width:760px){
+  body{
+    padding:16px;
+  }
+
+  header{
+    flex-direction:column;
+    gap:18px;
+    align-items:center;
+    text-align:left;
+  }
+
+  .profile{
+    width:170px;
+  }
+
+  h1{
+    text-align:center;
+    font-size:30px;
+  }
+
+  nav a{
+    margin:6px 10px;
+  }
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+<img src="0.png" class="profile" alt="Mathematical surface illustration for Erhan Güler">
+
+<div>
+
+<h1>Erhan G&uuml;ler</h1>
+
+<p class="quote">
+Geometry helps us understand the architecture of the Earth locally and the Cosmos globally,
+where order and chaos are interconnected, designed by the Creator as a guide for us.
+</p>
+
+
+<p>
+
+
+My research focuses on differential geometry, mathematical physics, particularly on
+Weierstrass-type representations,
+the Laplace&ndash;Beltrami operator,
+and the Cheng&ndash;Yau operator, as well as on helicoidal, 
+ rotational, minimal,
+maximal, algebraic, and non-orientable surfaces
+and hypersurfaces in space forms.
+
+</p>
+
+
+<div class="links">
+
+<a href="https://mathscinet.ams.org/mathscinet/author?authorId=796231" target="_blank" rel="noopener">MathSciNet</a>
+<a href="https://scholar.google.com/citations?user=y6SpvRIAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+<a href="https://orcid.org/0000-0003-3264-6239" target="_blank" rel="noopener">ORCID</a>
+<a href="https://www.scopus.com/authid/detail.uri?authorId=15020625500" target="_blank" rel="noopener">Scopus</a>
+<a href="https://www.researchgate.net/profile/Erhan-Gueler-2" target="_blank" rel="noopener">ResearchGate</a>
+<a href="https://www.webofscience.com/wos/author/record/D-2673-2011" target="_blank" rel="noopener">Web of Science</a>
+<a href="https://zbmath.org/authors/?q=erhan+guler" target="_blank" rel="noopener">zbMATH</a>
+
+</div>
+
+</div>
+
+</header>
+
+
+
+<nav>
+
+<a href="#education">Education</a>
+<a href="#experience">Academic Experience</a>
+<a href="#publications">Selected Publications</a>
+<a href="cv.pdf" target="_blank" rel="noopener">CV</a>
+<a href="#images">Images</a>
+<a href="#contact">Contact</a>
+
+</nav>
+
+
+
+<section id="education">
+
+<h2>Education</h2>
+
+<ul>
+<li>Ph.D. in Mathematics, Ankara University, 2010</li>
+<li>M.Sc. in Mathematics, Gazi University, 2005</li>
+<li>B.Sc. in Mathematics, Ondokuz May&#305;s University, 1997</li>
+</ul>
+
+</section>
+
+
+
+<section id="experience">
+
+<h2>Academic Experience</h2>
+
+<ul>
+
+<li>Postdoctoral Teaching Scholar, Texas Tech University (2024&ndash;present)</li>
+<li>Professor, Bart&#305;n University (2024)</li>
+<li>Associate Professor, Bart&#305;n University (2019&ndash;2024)</li>
+<li>Postdoctoral Researcher, Kobe University (2014)</li>
+<li>Invited Researcher, University of Granada (2014)</li>
+<li>Assistant Professor, Bart&#305;n University (2013&ndash;2019)</li>
+<li>Postdoctoral Researcher, Katholieke Leuven University (2011&ndash;2012)</li>
+
+</ul>
+
+</section>
+<section id="publications">
+<h2>Selected Publications</h2>
+
+<ul>
+
+
+
+
+<li>
+Toda M., G&uuml;ler E., Atampalage  M.D. 
+A Weierstrass&ndash;Kenmotsu-type representation for CMC \(0 \leq H < 1\) in \(\mathbb{H}^3(-1)\) via adjusted Gauss maps and Iwasawa splitting.
+<em>Differential Geometry and its Applications</em>, 103 (2026) 102383.
+<a href="https://www.sciencedirect.com/science/article/pii/S0926224526000549?via%3Dihub" target="_blank" rel="noopener">link</a>
+</li>
+
+
+
+<li>
+G&uuml;ler E., Toda M.
+Weierstrass-type constructions, variational analysis and integral-free minimal immersions in \( \mathbb{R}^n \).
+<em>Electronic Research Archive</em>, 34(3) (2026) 1885&ndash;1899.
+<a href="https://www.aimspress.com/article/doi/10.3934/era.2026084" target="_blank" rel="noopener">link</a>
+</li>
+
+
+<li>
+Toda M., G&uuml;ler E.
+Generalized Weierstrass&ndash;Enneper representation for minimal surfaces in \( \mathbb{R}^4 \).
+<em>AIMS Mathematics</em>, 10(9) (2025) 22406&ndash;22420.
+<a href="https://www.aimspress.com/article/doi/10.3934/math.2025997" target="_blank" rel="noopener">link</a>
+</li>
+
+
+<li>
+G&uuml;ler E., Turgay N.C.
+Rotational hypersurfaces satisfying \( \mathbb{L}_{n-3} \mathcal{G} = \mathcal{AG} \) in the \( n \)-dimensional Euclidean space.
+<em>Advances in Applied Mathematics</em>, 167 (2025) 102879.
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S0196885825000417" target="_blank" rel="noopener">link</a>
+</li>
+
+
+
+<li>
+G&uuml;ler E.
+Investigating helical hypersurfaces within 7-dimensional Euclidean space.
+<em>Journal of Mathematics</em>, 459717 (2024) 1&ndash;12.
+<a href="https://onlinelibrary.wiley.com/doi/10.1155/2024/3459717" target="_blank" rel="noopener">link</a>
+</li>
+
+
+<li>
+G&uuml;ler E.
+Fourth fundamental form and i-th curvature formulas in \( \mathbb{E}^4 \).
+<em>S&atilde;o Paulo Journal of Mathematical Sciences</em>, 18 (2024) 1779&ndash;1792.
+<a href="https://link.springer.com/article/10.1007/s40863-024-00438-3" target="_blank" rel="noopener">link</a>
+</li>
+
+
+<li>
+Li Y., G&uuml;ler E., Toda M.
+Family of right conoid hypersurfaces with light-like axis in Minkowski four-space.
+<em>AIMS Mathematics</em>, 9(7) (2024) 18732&ndash;18745.
+<a href="https://www.aimspress.com/article/doi/10.3934/math.2024911" target="_blank" rel="noopener">link</a>
+</li>
+
+
+<li>
+Chen B.Y., G&uuml;ler E., Yayl&#305; Y., Hac&#305;salio&#287;lu H.H.
+Differential geometry of 1-type submanifolds and submanifolds with 1-type Gauss map.
+<em>International Electronic Journal of Geometry</em>, 16(1) (2023) 4&ndash;47.
+<a href="https://dergipark.org.tr/en/pub/iejg/article/1216024" target="_blank" rel="noopener">link</a>
+</li>
+
+
+
+<li>
+G&uuml;ler E.
+Twisted hypersurfaces family with a space-like axis in Minkowski 4-space.
+<em>Modern Physics Letters A</em>, 2350112 (2023) 1&ndash;15.
+<a href="https://www.worldscientific.com/doi/10.1142/S0217732323501122" target="_blank" rel="noopener">link</a>
+</li>
+
+
+
+<li>
+G&uuml;ler E.
+Algebraic equations and graphics of Bour's minimal surfaces family.
+<em>Journal of Interdisciplinary Mathematics</em>, 25(8) (2022) 2113&ndash;2125.
+<a href="https://www.tandfonline.com/doi/abs/10.1080/09720502.2021.1923939" target="_blank" rel="noopener">link</a>
+</li>
+
+
+
+<li>
+G&uuml;ler E., Yayl&#305; Y., Hac&#305;salio&#287;lu H.H.
+Birotational hypersurface and the second Laplace&ndash;Beltrami operator in the four dimensional Euclidean space \( \mathbb{E}^4 \). 
+<em>Turkish Journal of Mathematics</em>, 46(6) (2022) 2167&ndash;2177.
+<a href="https://journals.tubitak.gov.tr/math/vol46/iss6/9/" target="_blank" rel="noopener">link</a>
+</li>
+
+
+
+<li>
+G&uuml;ler E., Turgay N.C.
+Cheng&ndash;Yau operator and Gauss map of rotational hypersurfaces in 4-space.
+<em>Mediterranean Journal of Mathematics</em>, 16 (2019) 66.
+<a href="https://link.springer.com/article/10.1007/s00009-019-1333-y?utm_source=researchgate.net&utm_medium=article" target="_blank" rel="noopener">link</a>
+</li>
+
+
+<li>
+G&uuml;ler E., Konnai S., Yasumoto M.
+Bour surface companions in space forms.
+<em>Geometry Integrability &amp; Quantization</em>, 17 (2016) 256-269.
+<a href="https://projecteuclid.org/ebooks/geometry-integrability-and-quantization/Proceedings-of-the-Seventeenth-International-Conference-on-Geometry-Integrability-and/chapter/Bour-Surface-Companions-in-Space-Forms/10.7546/giq-17-2016-256-269" target="_blank" rel="noopener">link</a>
+</li>
+
+
+
+<li>
+G&uuml;ler E., Magid M., Yayl&#305; Y.
+Laplace&ndash;Beltrami operator of a helicoidal hypersurface in four-space.
+<em>Journal of Geometry and Symmetry in Physics</em>, 41 (2016) 77&ndash;95.
+<a href="http://www.bio21.bas.bg/jgsp/jgsp_files/vol41/volume41cont.html" target="_blank" rel="noopener">link</a>
+</li>
+
+
+
+
+
+<li>
+Xu G., Rabczuk T., G&uuml;ler E., Wu X., Hui K., Wang G.
+Quasi-harmonic Bezier approximation of minimal surfaces for finding forms of structural membranes.
+<em>Computers &amp; Structures</em>, 161 (2015) 55&ndash;63.
+<a href="https://www.sciencedirect.com/science/article/pii/S0045794915002606?via%3Dihub" target="_blank" rel="noopener">link</a>
+</li>
+
+
+<li>
+G&uuml;ler E., Turgut Vanl&#305; A.
+Bour's theorem in Minkowski 3-space.
+<em>Journal of Mathematics of Kyoto University</em>, 46(1) (2006) 47&ndash;63.
+<a href="https://projecteuclid.org/journals/journal-of-mathematics-of-kyoto-university/volume-46/issue-1/Bours-theorem-in-Minkowski-3-space/10.1215/kjm/1250281796.full" target="_blank" rel="noopener">link</a>
+</li>
+
+
+</ul>
+
+
+</section>
+
+
+
+
+<section id="images">
+
+<h2>Images</h2>
+
+<div class="images">
+
+<img src="1.png" alt="Mathematical surface image 1" loading="lazy">
+<img src="2.png" alt="Mathematical surface image 2" loading="lazy">
+<img src="3.png" alt="Mathematical surface image 3" loading="lazy">
+<img src="4.png" alt="Mathematical surface image 4" loading="lazy">
+<img src="5.png" alt="Mathematical surface image 5" loading="lazy">
+<img src="6.png" alt="Mathematical surface image 6" loading="lazy">
+<img src="7.png" alt="Mathematical surface image 7" loading="lazy">
+<img src="8.png" alt="Mathematical surface image 8" loading="lazy">
+<img src="9.png" alt="Mathematical surface image 9" loading="lazy">
+<img src="10.png" alt="Mathematical surface image 10" loading="lazy">
+<img src="11.png" alt="Mathematical surface image 11" loading="lazy">
+<img src="12.png" alt="Mathematical surface image 12" loading="lazy">
+<img src="13.png" alt="Mathematical surface image 13" loading="lazy">
+<img src="14.png" alt="Mathematical surface image 14" loading="lazy">
+<img src="15.png" alt="Mathematical surface image 15" loading="lazy">
+<img src="16.png" alt="Mathematical surface image 16" loading="lazy">
+<img src="17.png" alt="Mathematical surface image 17" loading="lazy">
+<img src="18.png" alt="Mathematical surface image 18" loading="lazy">
+<img src="19.png" alt="Mathematical surface image 19" loading="lazy">
+<img src="20.png" alt="Mathematical surface image 20" loading="lazy">
+<img src="21.png" alt="Mathematical surface image 21" loading="lazy">
+<img src="22.png" alt="Mathematical surface image 22" loading="lazy">
+<img src="23.png" alt="Mathematical surface image 23" loading="lazy">
+<img src="24.png" alt="Mathematical surface image 24" loading="lazy">
+<img src="25.png" alt="Mathematical surface image 25" loading="lazy">
+<img src="26.png" alt="Mathematical surface image 26" loading="lazy">
+<img src="27.png" alt="Mathematical surface image 27" loading="lazy">
+<img src="28.png" alt="Mathematical surface image 28" loading="lazy">
+<img src="29.png" alt="Mathematical surface image 29" loading="lazy">
+<img src="30.png" alt="Mathematical surface image 30" loading="lazy">
+<img src="31.png" alt="Mathematical surface image 31" loading="lazy">
+<img src="32.png" alt="Mathematical surface image 32" loading="lazy">
+<img src="33.png" alt="Mathematical surface image 33" loading="lazy">
+<img src="34.png" alt="Mathematical surface image 34" loading="lazy">
+<img src="35.png" alt="Mathematical surface image 35" loading="lazy">
+<img src="36.png" alt="Mathematical surface image 36" loading="lazy">
+<img src="37.png" alt="Mathematical surface image 37" loading="lazy">
+<img src="38.png" alt="Mathematical surface image 38" loading="lazy">
+
+<img src="40.png" alt="Mathematical surface image 40" loading="lazy">
+<img src="41.png" alt="Mathematical surface image 41" loading="lazy">
+
+</div>
+
+</section>
+
+
+
+<section id="contact">
+  <h2>Contact</h2>
+
+  <p>Texas Tech University</p>
+  <p>College of Arts and Sciences</p>
+  <p>Department of Mathematics and Statistics</p>
+  <p>Office: MA250</p>
+  <p>Email: eguler@ttu.edu</p>
+</section>
+
+
+
+<footer>
+&copy; 2026 Erhan G&uuml;ler
+</footer>
+
+</body>
+</html>
